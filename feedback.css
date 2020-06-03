@@ -80,12 +80,12 @@ body::before {
   width: 100%;
   z-index: -1;
   background: var(#f39f86);
-  /* background-image: linear-gradient(
+   background-image: linear-gradient(
       115deg,
       rgba(243, 159, 134, 0.0),
       rgba(249, 217, 118, 0.65)
     ),
-    url(https://thewallpaper.co//wp-content/uploads/2016/03/restaurant-hd-wallpaper-download-restaurant-pictures-free-windows-wallpaper-widescreen-artworks-1920x1200.jpg); */
+    url(https://thewallpaper.co//wp-content/uploads/2016/03/restaurant-hd-wallpaper-download-restaurant-pictures-free-windows-wallpaper-widescreen-artworks-1920x1200.jpg); 
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -128,21 +128,11 @@ button {
 }
 
 .container {
-  width: 100%;
+  width: 70%;
   margin: 3.125rem auto 0 auto;
 }
 
-@media (min-width: 576px) {
-  .container {
-    max-width: 540px;
-  }
-}
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 720px;
-  }
-}
 
 .header {
   padding: 0.5rem 0.2rem 0.5rem 0.2rem;
@@ -182,11 +172,7 @@ form {
   border-radius: 0.25rem;
 }
 
-@media (min-width: 480px) {
-  form {
-    padding: 2.5rem;
-  }
-}
+
 
 .form-group {
   margin: 0 auto 1.25rem auto;
