@@ -1,0 +1,147 @@
+<html>
+<head>
+	<title>Firebase Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+	<link href="frameworks/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="frameworks/css/bootstrap-theme.min.css" rel="stylesheet"/>
+    <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
+	
+    <!-- Bootstrap -->
+	<link rel="stylesheet" href="style.css">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+
+	 	 
+</head>
+<body>
+
+
+ <div id="user_div" >
+   
+	<nav class="navbar navbar-default">
+		<div class="container-fluid" id="navigation">
+			<nav class="navbar navbar head"  style="margin-bottom: 5px;font-weight: bold;">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand system" href="#">Khan Restaurent</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="image_galery.html">Manue</a></li>
+						<li><a href="aboutus.html">About us</a></li>
+						
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li onclick="logout()"><a href=""><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+					</ul>
+				</div>
+			</nav>	
+		</div>
+	</nav>	
+<div class="container-fluid" >
+		
+	<form method="post" action="#">
+	  <fieldset >
+		   <label for="fncn">Food NickName:</label>
+		  <input type="text" id="fdncn" name="fname" >&nbsp;&nbsp;
+		  <label for="fname">Food FullName:</label>
+		  <input type="text" id="fdfln" name="fname" >&nbsp;&nbsp;
+		  <label for="lname">Price:</label>
+		  <input type="text" id="price" name="price"><br><br>
+		  <label for="description">Description:</label>
+		  <input type="text" id="description" name="description" style="width:400px; height:100px;"><br>
+		  <label for="myfile">Select a file:</label>
+		  <input type="file" id="myfile" name="myfile"><br>
+		  <input type="submit" id ="submit" value ="Submit">
+	   </fieldset>
+	</form>	
+
+		
+	<h2>Result of upload items</h2>	
+	 </br>
+	 
+	<table id="myTable" class="table table-bordered">
+	  <tr class="row" >
+		<th  class="col-sm-2" align="center">Food Image</th>
+		<th  class="col-sm-1" align="center">Food NickName</th>
+		<th  class="col-sm-2" align="center">Food FullName</th>
+		<th  class="col-sm-1" align="center">Price</th>
+		<th  class="col-sm-4" align="center">Description</th>
+		<th  class="col-sm-2" align="center">Manage</th>
+	  </tr>
+	</table>
+	
+	
+	<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Modal Header</h4>
+      </div>
+      <div class="modal-body">
+        <form>
+	     <label for="emyfile">Select a file:</label>
+		  <input type="file" id="emyfile" name="myfile"><br>
+		   <label for="efncn">Food NickName:</label>
+		  <input type="text" id="efdncn" name="fname" ><br>
+		  <label for="efname">Food FullName:</label>
+		  <input type="text" id="efdfln" name="fname" ><br>
+		  <label for="elname">Price:</label>
+		  <input type="text" id="eprice" name="price"><br><br>
+		  <label for="edescription">Description:</label>
+		  <input type="text" id="edescription" name="description" style="width:400px; height:100px;"><br>
+		  
+		  
+	   
+	</form>
+
+      </div>
+      <div class="modal-footer">
+	   <button type="button" id="edtBtn" class="btn btn-primary" data-dismiss="modal">Ok</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+	
+
+  </div>
+</div>
+	<!-- Modal -->
+<div id="delModal" class="modal fade" role="dialog">
+  <div class="modal-dialog">
+	    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Remove User</h4>
+      </div>
+      <div class="modal-body">
+         <h5 id="delU"></h5>
+
+      </div>
+
+	    <div class="modal-footer">
+		  <button type="button" class="btn btn-primary" id="delBtn" data-dismiss="modal">Ok</button>
+          <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+  </div>
+</div>
+
+	
+	
+</div>
+
+ 
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src='firebase.js'> </script>
+ 
+</body>
+</html>

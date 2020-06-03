@@ -1,0 +1,105 @@
+<html>
+<head>
+	<title>Firebase Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0" />
+    <!-- Bootstrap -->
+	 <link href="frameworks/css/bootstrap.min.css" rel="stylesheet" />
+	 <link href="frameworks/css/bootstrap-theme.min.css" rel="stylesheet"/>
+	
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+	 <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
+	 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <link rel="stylesheet" href="style.css" /> 
+	 	 
+</head>
+<body>
+
+ <div id="login_div" class="main-div">
+		<h3>Login to the dashboard</h3>
+		<input type="email" placeholder="Email..." id="email_field" />
+		<input type="password" placeholder="Password..." id="password_field" />
+
+		<button onclick="login()">Login to Account</button>
+ </div>
+
+ <div id="user_div" >
+   
+	<nav class="navbar navbar-default">
+		<div class="container-fluid" id="navigation">
+			<nav class="navbar navbar head"  style="margin-bottom: 5px;font-weight: bold;">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand system" href="#">Real-Time Environment</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="image_galery.html">image Galary</a></li>
+						<li><a href="aboutus.html">About us</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Node
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+							  <li><a href="index.html">Node1</a></li>
+							  <li><a href="node2.html">Node2</a></li>
+							  
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li onclick="logout()"><a href=""><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+					</ul>
+				</div>
+			</nav>	
+		</div>
+	</nav>	
+	<div class="container-fluid" >
+		<div class="col col-xs-6" id="current-reading1">
+			 <div>Current Temperature</div>
+			 <div><img src="image/images.png" alt="HTML5 Icon" style="width:58px;height:58px;align=center;border-radius: 50%;"></div> 
+			<div id="object"> </div><br> 
+			<!-- <div id="modal">
+				<div id="chartContainer2" style="height: 450px; width: 100%;"></div>  
+				<button id="closeBtn">Close</button>
+			</div> -->			
+			<div id="chartContainer1" style="height: 360px; width: 100%;"></div>
+			<!-- <button id="btn3">Spline Chart</button> -->
+		</div>
+		
+
+		
+		<div class="col col-xs-6" id="current-reading1"> 
+			<div>Current humidity</div>
+			  <div><img src="image/humidity.jpg" alt="HTML5 Icon" style="width:58px;height:58px;align=center;border-radius: 50%;"></div> 
+			<div id="object2"></div><br>  
+			<!-- <div id="modal2">
+				<div id="chartContainer4" style="height: 450px; width: 100%;"></div>  
+				<button id="closeBtn2">Close</button>
+			</div> -->			
+			<div id="chartContainer3" style="height: 360px; width: 100%;background-color:black;"></div>
+			<!-- <button id="btn3">Spline Chart</button>	 -->
+
+	    </div>
+		
+		
+		
+ </div>
+ <h2>Result of Image processing</h2>
+ </br>
+ <main id="main"></main>
+ </div>
+
+
+
+
+
+
+  	<script type="text/javascript" src='index.js'> </script>
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+</html>
