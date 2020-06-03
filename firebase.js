@@ -1,5 +1,3 @@
-
-
 var config = {
    apiKey: "AIzaSyC_O4rXOarwHq0lp1_bOmGo1dOtgzMJEeg",
    authDomain: "mydata-3050f.firebaseapp.com",
@@ -20,7 +18,7 @@ const SubmitButton = document.getElementById('submit');
 const updateButton = document.getElementById('update');
 const DeleteButton = document.getElementById('delete');
 
-const roodRef = firebase.database().ref().child('no');
+const roodRef = firebase.database().ref().child('KhanRastaurent');
 //upload the data to firebase
 SubmitButton.addEventListener('click',function(e){
 	e.preventDefault();
@@ -52,7 +50,7 @@ SubmitButton.addEventListener('click',function(e){
 let main = document.getElementById("myTable");
 let database = firebase.database();	  
 //lagrer URL til bilder
-let bildeurler = database.ref().child("no");
+let bildeurler = database.ref().child("KhanRastaurent");
 // retrive data firebase to webpage	  
 function visBilder(snap){
 	let Picture = snap.val().url;
@@ -92,7 +90,7 @@ bildeurler.on("child_added", visBilder)
 		row.onclick = function(){
             var cell = this.getElementsByTagName("td");
 			
-				var delUserName = cell[0].innerHTML;
+				var delUserName = cell[1].innerHTML;
 				var delUser = cell[2].innerHTML;
 				
 				//delete modal para
@@ -102,7 +100,7 @@ bildeurler.on("child_added", visBilder)
 			$(document).on("click", "#delBtn", function(){
 				console.log("wordjb");
 				
-				let userRef = database.ref().child('no/' + delUserName);
+				let userRef = database.ref().child('KhanRastaurent/' + delUserName);
 				userRef.remove()
 				
 				location.reload();
@@ -122,9 +120,9 @@ bildeurler.on("child_added", visBilder)
 					var new_description = document.getElementById("edescription").value;
 					var new_picture = document.getElementById("emyfile").value;
 				
-					let roodRef = firebase.database().ref().child('no');
+					let roodRef = firebase.database().ref().child('KhanRastaurent');
 					
-				roodRef.child(new_nicknameid).update({
+				roodRef.child(new_nickname).update({
 				
 					'Price':new_price,
 					'FoodNicName':new_nickname,
@@ -142,7 +140,3 @@ bildeurler.on("child_added", visBilder)
 
 
 
-
-
-
-// delete the old data by the user from the database

@@ -11,7 +11,7 @@
 	<link rel="stylesheet" href="style.css">
 	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-
+	<link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap" rel="stylesheet">
 	 	 
 </head>
 <body>
@@ -41,22 +41,24 @@
 	</nav>	
 <div class="container-fluid" >
 		
-	<form method="post" action="#">
+	<form id ="myForm">
 	  <fieldset >
-		   <label for="fncn">Food NickName:</label>
+		  <label for="fncn">Food NickName:</label>
 		  <input type="text" id="fdncn" name="fname" >&nbsp;&nbsp;
 		  <label for="fname">Food FullName:</label>
 		  <input type="text" id="fdfln" name="fname" >&nbsp;&nbsp;
 		  <label for="lname">Price:</label>
 		  <input type="text" id="price" name="price"><br><br>
 		  <label for="description">Description:</label>
-		  <input type="text" id="description" name="description" style="width:400px; height:100px;"><br>
+		  <textarea id="description" name="description" rows="4" cols="20"></textarea><br><br>
 		  <label for="myfile">Select a file:</label>
 		  <input type="file" id="myfile" name="myfile"><br>
-		  <input type="submit" id ="submit" value ="Submit">
+		  <input type="submit" id ="submit" value ="Submit" onclick="myFunction()" >
 	   </fieldset>
 	</form>	
-
+ 
+	
+	
 		
 	<h2>Result of upload items</h2>	
 	 </br>
@@ -94,7 +96,8 @@
 		  <label for="elname">Price:</label>
 		  <input type="text" id="eprice" name="price"><br><br>
 		  <label for="edescription">Description:</label>
-		  <input type="text" id="edescription" name="description" style="width:400px; height:100px;"><br>
+		  
+		  <textarea id="edescription" name="description" rows="4" cols="20"></textarea><br><br>
 		  
 		  
 	   
@@ -135,6 +138,63 @@
 	
 	
 </div>
+
+
+
+  
+
+  
+
+
+
+
+<!-- main content/jumbotron starts here -->    
+<!-- container: make the edges of header are aligning with the edges of main content -->  
+ <div id="main-content" class="container">
+  
+   
+
+
+    
+  </div><!-- End of #main-content -->
+
+  <footer class="panel-footer" id ="h">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          7105 Reisterstown Road<br>
+          Baltimore, MD 21215
+          <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+          <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright David Chu's China Bistro 2016</div>
+    
+  </footer>
+
+
+  <!-- jQuery (Bootstrap JS plugins depend on it) -->
+  <script src="js/jquery-2.1.4.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/script.js"></script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>  
+  
+  
+  
+  
 
  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>

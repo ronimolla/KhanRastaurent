@@ -1,0 +1,266 @@
+<html>
+<head>
+	<title>Firebase Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,
+    initial-scale=1.0" />
+    <!-- Bootstrap -->
+	 <link href="frameworks/css/bootstrap.min.css" rel="stylesheet" />
+	 <link href="frameworks/css/bootstrap-theme.min.css" rel="stylesheet"/>
+	
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	 <link href="https://fonts.googleapis.com/css?family=Nunito:400,600,700" rel="stylesheet">
+	 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script> 
+	 <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase.js"></script>
+	 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	 <link rel="stylesheet" href="feedback.css" /> 
+	 	 
+</head>
+<body>
+
+ 
+
+ <div id="user_div" >
+   
+	<nav class="navbar navbar-default">
+		<div class="container-fluid" id="navigation">
+			<nav class="navbar navbar head"  style="margin-bottom: 5px;font-weight: bold;">
+				<div class="container-fluid">
+					<div class="navbar-header">
+						<a class="navbar-brand system" href="#">Real-Time Environment</a>
+					</div>
+					<ul class="nav navbar-nav">
+						<li class="active"><a href="index.html">Home</a></li>
+						<li><a href="image_galery.html">image Galary</a></li>
+						<li><a href="aboutus.html">About us</a></li>
+						<li class="dropdown">
+							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Node
+							<span class="caret"></span></a>
+							<ul class="dropdown-menu">
+							  <li><a href="index.html">Node1</a></li>
+							  <li><a href="node2.html">Node2</a></li>
+							  
+							</ul>
+						</li>
+					</ul>
+					<ul class="nav navbar-nav navbar-right">
+						<li onclick="logout()"><a href=""><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+					</ul>
+				</div>
+			</nav>	
+		</div>
+	</nav>	
+	<div class="container-fluid" >
+	<div class="container">
+  <header class="header">
+    <h1 id="title" class="text-center">Restaurant Feedback Form</h1>
+    <p id="description" class="description text-center">
+      Thank you for taking the time to help us improve!
+    </p>
+  </header>
+  <form id="survey-form">
+    <div class="form-group">
+      <label id="name-label" for="name">Name</label>
+      <input
+        type="text"
+        name="name"
+        id="name"
+        class="form-control"
+        placeholder="Enter your name"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="email-label" for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        id="email"
+        class="form-control"
+        placeholder="Enter your Email"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label id="number-label" for="number"
+        >Age<span class="clue">(optional)</span></label
+      >
+      <input
+        type="number"
+        name="age"
+        id="number"
+        min="10"
+        max="99"
+        class="form-control"
+        placeholder="Age"
+      />
+    </div>
+    <div class="form-group">
+      <p>How many of you are dining?</p>
+      <select id="dropdown" name="role" class="form-control" required>
+        <option disabled selected value>Select group size</option>
+        <option value="individual">Individual (one person)</option>
+        <option value="couple">Couple</option>
+        <option value="smallgroup">Small Group (3-4 people)</option>
+        <option value="largegroup">Large Group (more than 4 people)</option>
+        <option value="prefernot">Prefer Not to say</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>Would you recommend our restaurant to a friend?</p>
+      <label>
+        <input
+          name="user-recommend"
+          value="definitely"
+          type="radio"
+          class="input-radio"
+          checked
+        />Definitely</label
+      >
+      <label>
+        <input
+          name="user-recommend"
+          value="maybe"
+          type="radio"
+          class="input-radio"
+        />Maybe</label
+      >
+
+      <label
+        ><input
+          name="user-recommend"
+          value="not-sure"
+          type="radio"
+          class="input-radio"
+        />Not sure</label
+      >
+    </div>
+
+    <div class="form-group">
+      <p>
+        What is your favorite feature of our restaurant?
+      </p>
+      <select id="most-like" name="mostLike" class="form-control" required>
+        <option disabled selected value>Select an option</option>
+        <option value="food">Food</option>
+        <option value="ambience">Ambience</option>
+        <option value="service">Service</option>
+        <option value="menu">Menu</option>
+        <option value="prices">Prices&Offers</option>
+      </select>
+    </div>
+
+    <div class="form-group">
+      <p>
+        What would you like to see improved?
+        <span class="clue">(Check all that apply)</span>
+      </p>
+
+      <label
+        ><input
+          name="prefer"
+          value="Food"
+          type="checkbox"
+          class="input-checkbox"
+        />Food</label
+      >
+      <label>
+        <input
+          name="prefer"
+          value="Ambience"
+          type="checkbox"
+          class="input-checkbox"
+        />Ambience</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="Service Time"
+          type="checkbox"
+          class="input-checkbox"
+        />Service Time</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="Service Staff Quality"
+          type="checkbox"
+          class="input-checkbox"
+        />Service Staff Quality</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="Menu"
+          type="checkbox"
+          class="input-checkbox"
+        />Menu</label
+      >
+      <label
+        ><input
+          name="prefer"
+          value="Prices & Offers"
+          type="checkbox"
+          class="input-checkbox"
+        />Prices & Offers</label
+      >
+      
+    </div>
+
+    <div class="form-group">
+      <p>Any comments or suggestions?</p>
+      <textarea
+        id="comments"
+        class="input-textarea"
+        name="comment"
+        placeholder="Enter your comment here..."
+      ></textarea>
+    </div>
+
+    <div class="form-group">
+      <button type="submit" id="submit" class="submit-button">
+        Submit
+      </button>
+    </div>
+  </form>
+</div>
+	
+		
+	</div>
+
+ </div>
+<footer class="panel-footer" id ="h">
+      <div class="row">
+        <section id="hours" class="col-sm-4">
+          <span>Hours:</span><br>
+          Sun-Thurs: 11:15am - 10:00pm<br>
+          Fri: 11:15am - 2:30pm<br>
+          Saturday Closed
+          <hr class="visible-xs">
+        </section>
+        <section id="address" class="col-sm-4">
+          <span>Address:</span><br>
+          7105 Reisterstown Road<br>
+          Baltimore, MD 21215
+          <p>* Delivery area within 3-4 miles, with minimum order of $20 plus $3 charge for all deliveries.</p>
+          <hr class="visible-xs">
+        </section>
+        <section id="testimonials" class="col-sm-4">
+          <p>"The best Chinese restaurant I've been to! And that's saying a lot, since I've been to many!"</p>
+          <p>"Amazing food! Great service! Couldn't ask for more! I'll be back again and again!"</p>
+        </section>
+      </div>
+      <div class="text-center">&copy; Copyright David Chu's China Bistro 2016</div>
+    
+  </footer>
+
+
+
+
+  	
+	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+
+</body>
+</html>
