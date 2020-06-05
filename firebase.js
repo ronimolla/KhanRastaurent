@@ -15,8 +15,7 @@ const Price = document.getElementById('price');
 const Description = document.getElementById('description');
 const filButton = document.getElementById('myfile');
 const SubmitButton = document.getElementById('submit');
-const updateButton = document.getElementById('update');
-const DeleteButton = document.getElementById('delete');
+
 
 const roodRef = firebase.database().ref().child('KhanRastaurent');
 //upload the data to firebase

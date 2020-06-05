@@ -90,7 +90,10 @@ body::before {
   background-repeat: no-repeat;
   background-position: center;
 }
-
+.container {
+  width: 70%;
+  margin: 3.125rem auto 0 auto;
+}
 h1 {
   font-weight: 400;
   line-height: 1.2;
@@ -127,10 +130,7 @@ button {
   border: none;
 }
 
-.container {
-  width: 70%;
-  margin: 3.125rem auto 0 auto;
-}
+
 
 
 
@@ -211,6 +211,7 @@ form {
   width: 100%;
   padding: 0.625rem;
   resize: vertical;
+  color: black;
 }
 
 .submit-button {

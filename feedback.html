@@ -19,40 +19,35 @@
 </head>
 <body>
 
- 
-
- <div id="user_div" >
-   
-	<nav class="navbar navbar-default">
-		<div class="container-fluid" id="navigation">
-			<nav class="navbar navbar head"  style="margin-bottom: 5px;font-weight: bold;">
-				<div class="container-fluid">
-					<div class="navbar-header">
+<nav class="navbar navbar-default">
+	<div class="container-fluid" id="navigation">
+		<nav class="navbar navbar head"  style="margin-bottom: 5px;font-weight: bold;">
+			<div class="container-fluid">
+				<div class="navbar-header">
 						<a class="navbar-brand system" href="#">Real-Time Environment</a>
-					</div>
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="index.html">Home</a></li>
-						<li><a href="image_galery.html">image Galary</a></li>
-						<li><a href="aboutus.html">About us</a></li>
-						<li class="dropdown">
-							<a class="dropdown-toggle" data-toggle="dropdown" href="#">Node
-							<span class="caret"></span></a>
-							<ul class="dropdown-menu">
-							  <li><a href="index.html">Node1</a></li>
-							  <li><a href="node2.html">Node2</a></li>
-							  
-							</ul>
-						</li>
-					</ul>
-					<ul class="nav navbar-nav navbar-right">
-						<li onclick="logout()"><a href=""><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
-					</ul>
 				</div>
-			</nav>	
-		</div>
-	</nav>	
-	<div class="container-fluid" >
-	<div class="container">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="index.html">Home</a></li>
+					<li><a href="image_galery.html">image Galary</a></li>
+					<li><a href="aboutus.html">About us</a></li>
+					<li class="dropdown">
+						<a class="dropdown-toggle" data-toggle="dropdown" href="#">Node
+							<span class="caret"></span></a>
+						<ul class="dropdown-menu">
+						  <li><a href="index.html">Node1</a></li>
+						  <li><a href="node2.html">Node2</a></li>	  
+						</ul>
+					</li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li onclick="logout()"><a href=""><span class="glyphicon glyphicon-log-in" ></span> Logout</a></li>
+				</ul>
+			</div>
+		</nav>	
+	</div>
+</nav>	
+<div class="container-fluid" >
+<div class="container">
   <header class="header">
     <h1 id="title" class="text-center">Restaurant Feedback Form</h1>
     <p id="description" class="description text-center">
@@ -89,7 +84,7 @@
       <input
         type="number"
         name="age"
-        id="number"
+        id="age"
         min="10"
         max="99"
         class="form-control"
@@ -116,7 +111,7 @@
           value="definitely"
           type="radio"
           class="input-radio"
-          checked
+		  checked
         />Definitely</label
       >
       <label>
@@ -148,7 +143,7 @@
         <option value="ambience">Ambience</option>
         <option value="service">Service</option>
         <option value="menu">Menu</option>
-        <option value="prices">Prices&Offers</option>
+        <option value="prices and offers">Prices and Offers</option>
       </select>
     </div>
 
@@ -220,7 +215,7 @@
     </div>
 
     <div class="form-group">
-      <button type="submit" id="submit" class="submit-button">
+      <button type="submit" id="fbsubmit" class="submit-button">
         Submit
       </button>
     </div>
@@ -261,6 +256,7 @@
 
   	
 	<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+	<script type="text/javascript" src='feedback.js'> </script>
 
 </body>
 </html>
