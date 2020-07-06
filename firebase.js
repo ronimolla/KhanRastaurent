@@ -9,18 +9,18 @@ var config = {
  firebase.initializeApp(config);
   
   
-const FoodNicName = document.getElementById('fdncn');
-const FoodFullName = document.getElementById('fdfln');
-const Price = document.getElementById('price');
-const Description = document.getElementById('description');
-const filButton = document.getElementById('myfile');
-const SubmitButton = document.getElementById('submit');
 
+const SubmitButton = document.getElementById('submit');
 
 const roodRef = firebase.database().ref().child('KhanRastaurent');
 //upload the data to firebase
 SubmitButton.addEventListener('click',function(e){
 	e.preventDefault();
+	var FoodNicName = document.getElementById('fdncn');
+	var FoodFullName = document.getElementById('fdfln');
+	var Price = document.getElementById('price');
+	var Description = document.getElementById('description');
+	var filButton = document.getElementById('myfile');
 	var file = filButton.files[0];
 	var storageref = firebase.storage().ref('anue_pecture/'+ file.name);
 	var  uploadTask = storageref.put(file);
@@ -76,6 +76,7 @@ function visBilder(snap){
         <span><strong>Delete</strong></span>            
     </a></td>
 	  </tr> `;
+
 	   
 }	
 bildeurler.on("child_added", visBilder)
